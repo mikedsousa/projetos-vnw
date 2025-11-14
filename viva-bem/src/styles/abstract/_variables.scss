@@ -1,0 +1,31 @@
+// Cores
+$azul: #1173d4;
+$verde: #33cc73;
+
+// Gradientes
+$gradiente-verde-azul: linear-gradient(
+  to right, 
+  #4247a2 0%, 
+  #52b095 100%);
+
+$gradiente-verde: linear-gradient(
+  to right, 
+  #1173D4 0%, 
+  #33CC73 100%);
+  
+$gradiente-rosa: linear-gradient(
+  to right,
+  #f9016f 54%,
+  #930885 62%,
+  #d038aa 75%,
+  #851c87 100%
+);
+
+$gradiente-azul: linear-gradient(
+  to right,
+  #3373d2 16%,
+  #6f95c7 33%,
+  #7bb5f5 55%,
+  #0074ee 69%,
+  #5ea7ef 87%
+);

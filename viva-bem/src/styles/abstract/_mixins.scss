@@ -1,0 +1,13 @@
+@mixin gradiente($cor) {
+  background-image: $cor;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: black;
+}
+
+@mixin botao($color, $bgColor) {
+  border: 1px solid $color;
+  background-color: $bgColor;
+  color: $color;
+}

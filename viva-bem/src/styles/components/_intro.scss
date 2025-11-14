@@ -1,0 +1,59 @@
+@use "../abstract/mixins";
+@use "../abstract/variables";
+
+.cabecalho__intro {
+  margin: 5rem auto 0;
+  width: 90%;
+  max-width: 1120px;
+
+  text-align: center;
+  font-family: Inter, sans-serif;
+
+  &-titulo {
+    @include mixins.gradiente(variables.$gradiente-verde);
+
+    font-size: 45px;
+    font-weight: bold;
+  }
+
+  &-texto {
+    font-size: 26px;
+    margin-block: 1rem 2rem;
+  }
+
+  &-botao {
+    padding: 15px 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+
+    &__azul {
+      @include mixins.botao(white, variables.$azul);
+      border: 1px solid variables.$azul;
+    }
+
+    &__branco {
+      @include mixins.botao(variables.$azul, white);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    text-align: left;
+
+    &-titulo {
+      max-width: 600px;
+    }
+
+    &-texto {
+      max-width: 400px;
+    }
+
+    &-botao {
+      padding-inline: 50px;
+    }
+  }
+}

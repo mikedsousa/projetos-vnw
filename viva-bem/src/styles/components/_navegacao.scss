@@ -1,0 +1,57 @@
+@use "../abstract/variables";
+
+.cabecalho__navegacao {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 22px auto;
+  height: 50px;
+  width: 90%;
+  max-width: 1120px;
+  border-radius: 50px;
+
+  background-image: variables.$gradiente-verde-azul;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    min-width: 250px;
+  }
+
+  &-item,
+  &-item-desktop {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+  }
+
+  &-item-desktop {
+    display: none;
+  }
+
+  .cabecalho__logo {
+    width: 87px;
+    height: 21px;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-start;
+    padding-left: 30px;
+
+    ul {
+      margin-left: 200px;
+    }
+
+    &-item-desktop {
+      display: block;
+      margin-left: 40px;
+    }
+
+    &-item {
+      display: none;
+    }
+  }
+}
+
+
