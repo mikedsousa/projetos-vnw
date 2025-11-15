@@ -1,0 +1,97 @@
+@use "../abstract/variables";
+@use "../abstract/mixins";
+
+.exames {
+  background-color: variables.$cinza;
+  margin-top: 50px;
+  padding-inline: 1rem;
+
+  font-family: Inter, sans-serif;
+  text-align: center;
+
+  &__titulo {
+    @include mixins.gradiente(variables.$gradiente-verde);
+
+    padding-top: 50px;
+
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__texto {
+    margin: 40px auto;
+    line-height: 19px;
+    max-width: 960px;
+    font-size: 15px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__titulo {
+      font-size: 45px;
+    }
+
+    &__texto {
+      font-size: 20px;
+    }
+  }
+}
+
+.prevencao-fem {
+  background-color: variables.$rosa;
+  padding: 5rem 1rem;
+
+  font-family: Inter, sans-serif;
+  text-align: center;
+
+  &__titulo {
+    @include mixins.gradiente(variables.$gradiente-rosa);
+
+    font-size: 32px;
+    font-weight: bold;
+
+    margin-bottom: 4rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__titulo {
+      font-size: 45px;
+    }
+  }
+}
+
+.prevencao-mas {
+  padding: 5rem 1rem;
+
+  font-family: Inter, sans-serif;
+  text-align: center;
+
+  &__titulo {
+    @include mixins.gradiente(variables.$gradiente-azul);
+
+    font-size: 32px;
+    font-weight: bold;
+
+    margin-bottom: 4rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__titulo {
+      font-size: 45px;
+    }
+  }
+}
+
+.alertas {
+  padding: 5rem 1rem;
+
+  &__titulo {
+    @include mixins.gradiente(variables.$gradiente-verde);
+
+    text-align: center;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+
+    margin-bottom: 3rem;
+  }
+}

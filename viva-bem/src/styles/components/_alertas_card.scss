@@ -1,0 +1,46 @@
+@use "../abstract/mixins";
+@use "../abstract/variables";
+
+.alertas_card {
+  max-width: 415px;
+  height: 140px;
+
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+
+  margin-inline: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+
+  &__titulo {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  &:nth-child(1) {
+    @include mixins.alerta(variables.$rosa-fundo, variables.$rosa-texto);
+    .alertas_card__titulo::before {
+      content: url("../../images/iconCoração.svg");
+    }
+  }
+  &:nth-child(2) {
+    @include mixins.alerta(variables.$azul-fundo, variables.$azul-texto);
+    .alertas_card__titulo::before {
+      content: url("../../images/iconEscudo.svg");
+    }
+  }
+  &:nth-child(3) {
+    @include mixins.alerta(variables.$verde-fundo, variables.$verde-texto);
+    .alertas_card__titulo::before {
+      content: url("../../images/iconVacina.svg");
+    }
+  }
+  &:nth-child(4) {
+    @include mixins.alerta(variables.$amarelo-fundo, variables.$amarelo-texto);
+    .alertas_card__titulo::before {
+      content: url("../../images/iconCerebro.svg");
+    }
+  }
+}

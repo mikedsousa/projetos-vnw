@@ -11,3 +11,22 @@
   background-color: $bgColor;
   color: $color;
 }
+
+@mixin alerta($fundo, $fonte) {
+  background-color: $fundo;
+  color: $fonte;
+
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .alertas_card__titulo::before {
+    vertical-align: -35%;
+    padding-right: 10px;
+  }
+}

@@ -5,3 +5,11 @@
   @use './components/navegacao';
   @use './components/cabecalho';
   @use './components/intro';
+  @use './components/articles';
+  @use './components/article_card';
+  @use './components/prevencao_card';
+  @use './components/alertas_card';
+  
+  
+  // Layout
+  @use './layout/container';
